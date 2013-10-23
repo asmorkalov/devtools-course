@@ -1,14 +1,18 @@
 #pragma once
 
-enum INPUT_TYPE { RANDOM, MANUAL };
-class Dichotomy_Search
+enum InputType { RANDOM, MANUAL };
+
+class DichotomySearch
 {
 public:
-	Dichotomy_Search();
-	Dichotomy_Search(INPUT_TYPE Type, int Array_Size, int Search_Element);
-	virtual ~Dichotomy_Search();
-    int Sort_Search();
+	DichotomySearch();
+	DichotomySearch(InputType type);
+	virtual ~DichotomySearch();
+
+    int Preprocess(int* array, int size);
+    int Search(int element);
+
 private:
-	int ** Array, Array_Size, Search_Element;
+    Tree tree;
 };
 
