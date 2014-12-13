@@ -11,6 +11,8 @@ cd $rawDir
 
 outDir="../../../../devtools-course-html"
 
+mkdir -p $outDir
+
 # Generating HTML
 for dir in $(ls -d [0-9]*/); 
 do
